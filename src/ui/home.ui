@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>window</class>
+ <widget class="QWidget" name="window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>1266</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>190</y>
+     <width>701</width>
+     <height>991</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane{
+min-width:70px;
+min-height:25px;
+border-top: 2px solid;
+border-top-color:rgb(85, 224, 255);
+border-radius: 20px;
+}
+
+QTabBar::tab {
+
+min-width:70px;
+
+min-height:25px;
+
+color:rgb(60, 140, 180);
+
+font:20px &quot;Microsoft YaHei&quot;;
+
+border: 0px solid;
+padding-left: 20px; /* 向右移动 20 像素 */
+
+
+}
+
+QTabBar::tab:selected{
+
+min-width:70px;
+
+min-height:25px;
+color:rgb(85, 224, 255);
+
+font:22px &quot;Microsoft YaHei&quot;;
+
+border: 0px solid;
+
+/* border-bottom: 2px solid;*/
+
+border-color: #4796f0;
+
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>认证</string>
+    </attribute>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>650</y>
+       <width>651</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar {
+border: 2px solid rgb(85, 224, 255);
+border-radius: 10px;
+background-color: white;
+}
+
+QProgressBar::chunk {
+background-color: rgb(85, 224, 255);
+width: 20px;
+}什么意思</string>
+     </property>
+     <property name="value">
+      <number>100</number>
+     </property>
+     <property name="textVisible">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>651</width>
+       <height>591</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QGroupBox {
+
+    border: 2px solid rgb(85, 224, 255);
+    border-radius: 10px;
+    font-size: 25px; 
+}
+
+QGroupBox::title {
+    color: rgb(85, 224, 255); /* 设置标题的颜色为蓝色 */
+
+}</string>
+     </property>
+     <property name="title">
+      <string>摄像头</string>
+     </property>
+     <widget class="QLabel" name="label_camera">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>34</y>
+        <width>581</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+border: 2px solid rgb(85, 224, 255);
+
+background-color: white;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>740</y>
+       <width>651</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+
+    border: 2px solid rgb(85, 224, 255);
+    border-radius: 10px;
+    font-size: 25px; 
+}
+
+QGroupBox::title {
+    color: rgb(85, 224, 255); /* 设置标题的颜色为蓝色 */
+
+}</string>
+     </property>
+     <property name="title">
+      <string>认证</string>
+     </property>
+     <widget class="QLabel" name="label_recg_userimg">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>141</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(85, 224, 255)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>src/noperson.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_recg_username">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>30</y>
+        <width>261</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(85, 224, 255)</string>
+      </property>
+      <property name="text">
+       <string>认证用户信息</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_statu">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>690</y>
+       <width>311</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Agency FB</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(85, 224, 255)</string>
+     </property>
+     <property name="text">
+      <string>视频采集中</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>管理</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>681</width>
+       <height>901</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane{
+min-width:70px;
+min-height:25px;
+border-top: 2px solid;
+border-top-color:rgb(85, 224, 255);
+}
+
+QTabBar::tab {
+
+min-width:70px;
+
+min-height:25px;
+
+color:rgb(60, 140, 180);
+
+font:16px &quot;Microsoft YaHei&quot;;
+
+border: 0px solid;
+
+
+
+}
+
+QTabBar::tab:selected{
+
+min-width:70px;
+
+min-height:25px;
+color:rgb(85, 224, 255);
+
+font:18px &quot;Microsoft YaHei&quot;;
+
+border: 0px solid;
+
+/*border-bottom: 2px solid;*/
+
+border-color: #4796f0;
+
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="usesScrollButtons">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>用户</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>661</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>-1</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+
+    border: 2px solid rgb(85, 224, 255);
+    border-radius: 20px;
+    font-size: 25px; 
+}
+
+QGroupBox::title {
+    color: rgb(85, 224, 255); /* 设置标题的颜色为蓝色 */
+
+}</string>
+       </property>
+       <property name="title">
+        <string>注册</string>
+       </property>
+       <widget class="QLabel" name="label_registeduser">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>60</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color :rgb(85, 224, 255)</string>
+        </property>
+        <property name="text">
+         <string>已有用户：</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_user">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>60</y>
+          <width>171</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* 设置边框样式 */
+QComboBox {
+    border: 2px solid #000000; /* 设置边框宽度和颜色 */
+    border-radius: 10px; /* 设置边框圆角 */
+    color:rgb(85, 224, 255);
+}
+
+/* 设置下拉箭头样式 */
+QComboBox::drop-down {
+    width: 30px; /* 设置箭头宽度 */
+    height: 38px; /* 设置箭头高度 */
+
+}
+
+
+
+/* 设置下拉列表样式 */
+QComboBox QAbstractItemView {
+    border: 2px solid #000000; /* 设置下拉列表边框样式 */
+    border-radius: 10px; /* 设置下拉列表边框圆角 */
+    background-color: #ffffff; /* 设置下拉列表背景颜色 */
+}
+
+/* 设置下拉列表中的项样式 */
+QComboBox QAbstractItemView::item {
+    height: 30px; /* 设置项高度 */
+    color: #000000; /* 设置项文字颜色 */
+	border: 2px solid #000000; /* 设置下拉列表边框样式 */
+    border-radius: 10px; /* 设置下拉列表边框圆角 */
+}
+
+/* 设置下拉列表中的项鼠标悬停样式 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #cccccc; /* 设置鼠标悬停时的背景颜色 */
+}
+
+/* 设置下拉列表中的选中项样式 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: #ff0000; /* 设置选中项的背景颜色 */
+    color: #ffffff; /* 设置选中项的文字颜色 */
+}</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>用户列表</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_regi_username">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>140</y>
+          <width>101</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color :rgb(85, 224, 255)</string>
+        </property>
+        <property name="text">
+         <string>用户名：</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_username">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>150</y>
+          <width>161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 10px;
+color :rgb(85, 224, 255)</string>
+        </property>
+        <property name="placeholderText">
+         <string extracomment="Enter your name"/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_del_user">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>280</y>
+          <width>141</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	color: rgb(255,255,255);
+	background-color: rgb(85, 224, 255);
+	border-radius: 10px;
+}/*
+QPushButton:hover 
+{
+	background-color: rgb(127,122,117)
+}*/
+QPushButton:pressed
+{
+	background-color: rgb(33,30,27);
+}</string>
+        </property>
+        <property name="text">
+         <string>删除用户</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_regist">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>280</y>
+          <width>141</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	color: rgb(255,255,255);
+	background-color: rgb(85, 224, 255);
+	border-radius: 10px;
+}/*
+QPushButton:hover 
+{
+	background-color: rgb(127,122,117)
+}*/
+QPushButton:pressed
+{
+	background-color: rgb(33,30,27);
+}</string>
+        </property>
+        <property name="text">
+         <string>注册用户</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_regi_userimg">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>30</y>
+          <width>201</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color :rgb(85, 224, 255)</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>src/noperson.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_loadimg">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>280</y>
+          <width>141</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	color: rgb(255,255,255);
+	background-color: rgb(85, 224, 255);
+	border-radius: 10px;
+}/*
+QPushButton:hover 
+{
+	background-color: rgb(127,122,117)
+}*/
+QPushButton:pressed
+{
+	background-color: rgb(33,30,27);
+}</string>
+        </property>
+        <property name="text">
+         <string>加载头像</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_del_info">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>280</y>
+          <width>141</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	color: rgb(255,255,255);
+	background-color: rgb(85, 224, 255);
+	border-radius: 10px;
+}/*
+QPushButton:hover 
+{
+	background-color: rgb(127,122,117)
+}*/
+QPushButton:pressed
+{
+	background-color: rgb(33,30,27);
+}</string>
+        </property>
+        <property name="text">
+         <string>删除信息</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>设置</string>
+      </attribute>
+      <widget class="QLabel" name="label_sim_label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>221</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(85, 224, 255)</string>
+       </property>
+       <property name="text">
+        <string>相似度阈值：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QSlider" name="sim_horizontalSlider">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>100</y>
+         <width>581</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+border: 3px solid rgb(85, 224, 255);
+border-radius: 10px;
+height: 20px;
+background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(85, 224, 255), stop:1 white);
+margin: 2px 0;
+}
+
+QSlider::handle:horizontal {
+background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #45ADED, stop:1 #0080FF);
+border: 1px solid rgb(85, 224, 255);
+width: 18px;
+margin: -2px 0;
+border-radius: 5px;
+}</string>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="singleStep">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>20</number>
+       </property>
+       <property name="tracking">
+        <bool>false</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sim_label_value">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>90</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(85, 224, 255)</string>
+       </property>
+       <property name="text">
+        <string>0.4</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>160</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(85, 224, 255)</string>
+       </property>
+       <property name="text">
+        <string>背景光强：</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_light">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>160</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+    border: 2px solid rgb(85, 224, 255); /* 设置边框宽度和颜色 */
+    border-radius: 10px; /* 设置边框圆角 */
+    color:rgb(85, 224, 255);
+</string>
+       </property>
+       <property name="minimum">
+        <number>-50</number>
+       </property>
+       <property name="maximum">
+        <number>50</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_quit">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>280</y>
+         <width>141</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton 
+{
+	color: rgb(255,255,255);
+	background-color: rgb(85, 224, 255);
+	border-radius: 10px;
+}/*
+QPushButton:hover 
+{
+	background-color: rgb(127,122,117)
+}*/
+QPushButton:pressed
+{
+	background-color: rgb(33,30,27);
+}</string>
+       </property>
+       <property name="text">
+        <string>退出系统</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>日志</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_titel">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>50</y>
+     <width>201</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>28</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(85, 224, 255)</string>
+   </property>
+   <property name="text">
+    <string>手势认证</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_background">
+   <property name="geometry">
+    <rect>
+     <x>-30</x>
+     <y>-70</y>
+     <width>871</width>
+     <height>1411</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>src/backgroundnew.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_notion">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>1180</y>
+     <width>661</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>28</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(85, 224, 255)</string>
+   </property>
+   <property name="text">
+    <string>↓↓↓请在下方执行手势↓↓↓</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_scut">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>161</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>src/scut.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_bip">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>10</y>
+     <width>171</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>src/biplab.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_background</zorder>
+  <zorder>tabWidget</zorder>
+  <zorder>label_titel</zorder>
+  <zorder>label_notion</zorder>
+  <zorder>label_scut</zorder>
+  <zorder>label_bip</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
